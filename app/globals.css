@@ -19,8 +19,6 @@
   --info: var(--category-4);
   --danger: #dc2626;
   --focus: var(--category-1);
-  --button-text: #000000;
-
   --category-1: #ff6920;
   --category-2: #3a7d40;
   --category-3: #ff7daf;
@@ -69,7 +67,7 @@
   --color-status-in-progress: var(--status-in-progress);
   --color-status-target: var(--status-target);
   --color-status-error: var(--status-error);
-  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -97,28 +95,64 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
 }
 
 @layer components {
   .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--brand);
     border-radius: 0;
-    background: var(--background);
-    color: var(--button-text);
+    background: var(--brand);
+    color: var(--brand-on);
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .btn-primary:hover:not(:disabled),
+  .btn-primary:active:not(:disabled) {
+    background: var(--hover);
+    color: var(--foreground);
   }
 
   .btn-secondary {
-    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
     border-radius: 0;
     background: var(--background-circle);
-    color: var(--button-text);
+    color: var(--foreground);
+    transition: background-color 150ms ease, border-color 150ms ease;
+  }
+
+  .btn-secondary:hover:not(:disabled),
+  .btn-secondary:active:not(:disabled) {
+    border-color: var(--border-strong);
+    background: var(--hover);
   }
 
   .btn-tertiary {
-    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
     border-radius: 0;
     background: transparent;
-    color: var(--button-text);
+    color: var(--foreground);
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .btn-tertiary:hover:not(:disabled),
+  .btn-tertiary:active:not(:disabled) {
+    background: var(--hover);
+  }
+
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .btn-tertiary:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
   }
 }

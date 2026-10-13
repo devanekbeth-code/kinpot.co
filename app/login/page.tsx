@@ -67,6 +67,12 @@ export default function LoginPage() {
         >
           {submitting ? "Logging in…" : "Log in"}
         </button>
+        <p className="text-center text-sm text-text-muted">
+          Don&apos;t have an account?{" "}
+          <Link href="/signup" className="text-link">
+            Create one
+          </Link>
+        </p>
       </form>
     </main>
   );
