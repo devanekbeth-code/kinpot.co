@@ -88,7 +88,7 @@ export default function ResetPasswordPage() {
             minLength={6}
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+            className="form-input px-3 py-2 placeholder:text-text-soft"
           />
         </label>
         <label className="flex flex-col gap-1.5 text-sm font-medium text-foreground">
@@ -99,7 +99,7 @@ export default function ResetPasswordPage() {
             minLength={6}
             value={confirmation}
             onChange={(event) => setConfirmation(event.target.value)}
-            className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+            className="form-input px-3 py-2 placeholder:text-text-soft"
           />
         </label>
         {error && <p className="text-sm text-danger">{error}</p>}

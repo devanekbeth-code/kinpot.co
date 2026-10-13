@@ -168,7 +168,7 @@ export default function AccountPage() {
             placeholder="New password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+            className="form-input px-3 py-2 placeholder:text-text-soft"
           />
           <input
             type="password"
@@ -177,7 +177,7 @@ export default function AccountPage() {
             placeholder="Confirm new password"
             value={confirmation}
             onChange={(event) => setConfirmation(event.target.value)}
-            className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+            className="form-input px-3 py-2 placeholder:text-text-soft"
           />
           <button
             type="submit"

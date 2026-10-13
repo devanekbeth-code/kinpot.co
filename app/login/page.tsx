@@ -46,7 +46,7 @@ export default function LoginPage() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+          className="form-input px-3 py-2 placeholder:text-text-soft"
         />
         <input
           type="password"
@@ -54,9 +54,12 @@ export default function LoginPage() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
+          className="form-input px-3 py-2 placeholder:text-text-soft"
         />
-        <Link href="/auth/forgot-password" className="-mt-2 text-sm text-link">
+        <Link
+          href="/auth/forgot-password"
+          className="-mt-2 self-start btn-tertiary px-3 py-2 text-sm text-link"
+        >
           Forgot your password?
         </Link>
         {error && <p className="text-sm text-danger">{error}</p>}
