@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -36,7 +37,7 @@ export default function LoginPage() {
         onSubmit={handleSubmit}
         className="flex w-full max-w-sm flex-col gap-4"
       >
-        <h1 className="text-center text-2xl font-semibold text-black dark:text-zinc-50">
+        <h1 className="text-center text-2xl font-semibold text-foreground">
           Log in
         </h1>
         <input
@@ -45,7 +46,7 @@ export default function LoginPage() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="rounded-md border border-zinc-300 px-3 py-2 dark:border-zinc-700 dark:bg-black dark:text-zinc-50"
+          className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
         />
         <input
           type="password"
@@ -53,13 +54,16 @@ export default function LoginPage() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="rounded-md border border-zinc-300 px-3 py-2 dark:border-zinc-700 dark:bg-black dark:text-zinc-50"
+          className="rounded-md border border-border bg-surface px-3 py-2 text-foreground placeholder:text-text-soft"
         />
-        {error && <p className="text-sm text-red-600">{error}</p>}
+        <Link href="/auth/forgot-password" className="-mt-2 text-sm text-link">
+          Forgot your password?
+        </Link>
+        {error && <p className="text-sm text-danger">{error}</p>}
         <button
           type="submit"
           disabled={submitting}
-          className="rounded-full bg-black px-5 py-2.5 text-white disabled:opacity-50 dark:bg-white dark:text-black"
+          className="btn-primary px-5 py-2.5 disabled:opacity-50"
         >
           {submitting ? "Logging in…" : "Log in"}
         </button>

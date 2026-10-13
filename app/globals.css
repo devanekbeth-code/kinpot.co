@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e6d3c5;
+  --background-circle: #f0e3da;
+  --hover: #d6bfae;
+  --surface: #ffffff;
+  --surface-soft: #f5f5f5;
+  --border: #dedede;
+  --border-strong: #919191;
+  --foreground: #242424;
+  --text-muted: #5c5c5c;
+  --text-soft: #6f6f6f;
+  --brand: #000000;
+  --brand-on: #ffffff;
+  --link: #0078d4;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --info: var(--category-4);
+  --danger: #dc2626;
+  --focus: var(--category-1);
+  --button-text: #000000;
+
+  --category-1: #ff6920;
+  --category-2: #3a7d40;
+  --category-3: #ff7daf;
+  --category-4: #226db5;
+  --category-5: #a8c6d9;
+  --category-6: #fbbb01;
+  --category-7: #99270d;
+  --category-8: #992610;
+
+  --status-complete: var(--category-4);
+  --status-upcoming: var(--category-1);
+  --status-in-progress: var(--category-1);
+  --status-target: var(--category-2);
+  --status-error: var(--category-7);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-circle: var(--background-circle);
+  --color-hover: var(--hover);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-text-muted: var(--text-muted);
+  --color-text-soft: var(--text-soft);
+  --color-brand: var(--brand);
+  --color-brand-on: var(--brand-on);
+  --color-link: var(--link);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus);
+  --color-category-1: var(--category-1);
+  --color-category-2: var(--category-2);
+  --color-category-3: var(--category-3);
+  --color-category-4: var(--category-4);
+  --color-category-5: var(--category-5);
+  --color-category-6: var(--category-6);
+  --color-category-7: var(--category-7);
+  --color-category-8: var(--category-8);
+  --color-status-complete: var(--status-complete);
+  --color-status-upcoming: var(--status-upcoming);
+  --color-status-in-progress: var(--status-in-progress);
+  --color-status-target: var(--status-target);
+  --color-status-error: var(--status-error);
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #3d3b3a;
+    --surface: #292929;
+    --surface-soft: #2e2e2e;
+    --border: #474747;
+    --border-strong: #5f5f5f;
+    --foreground: #dedede;
+    --text-muted: #919191;
+    --text-soft: #b0b0b0;
+    --brand: #ffffff;
+    --brand-on: #000000;
+    --link: #4da6ff;
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+    --background-circle: var(--surface-soft);
+    --hover: var(--border);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    border: 1px solid var(--brand);
+    border-radius: 0;
+    background: var(--background);
+    color: var(--button-text);
+  }
+
+  .btn-secondary {
+    border: 0;
+    border-radius: 0;
+    background: var(--background-circle);
+    color: var(--button-text);
+  }
+
+  .btn-tertiary {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--button-text);
+  }
 }
