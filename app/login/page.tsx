@@ -56,12 +56,6 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           className="form-input px-3 py-2 placeholder:text-text-soft"
         />
-        <Link
-          href="/auth/forgot-password"
-          className="-mt-2 self-start btn-tertiary px-3 py-2 text-sm text-link"
-        >
-          Forgot your password?
-        </Link>
         {error && <p className="text-sm text-danger">{error}</p>}
         <button
           type="submit"
@@ -70,6 +64,12 @@ export default function LoginPage() {
         >
           {submitting ? "Logging in…" : "Log in"}
         </button>
+        <Link
+          href="/auth/forgot-password"
+          className="self-center btn-tertiary px-3 py-2 text-sm text-link"
+        >
+          Forgot your password?
+        </Link>
         <p className="text-center text-sm text-text-muted">
           Don&apos;t have an account?{" "}
           <Link href="/signup" className="text-link">
