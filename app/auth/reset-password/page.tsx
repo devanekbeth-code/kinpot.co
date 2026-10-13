@@ -42,7 +42,7 @@ export default function ResetPasswordPage() {
   if (updated) {
     return (
       <main className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
-        <h1 className="text-2xl font-semibold text-foreground">
+        <h1 className="text-foreground">
           Password updated
         </h1>
         <p className="max-w-md text-text-muted">
@@ -73,7 +73,7 @@ export default function ResetPasswordPage() {
         className="flex w-full max-w-sm flex-col gap-4"
       >
         <div className="text-center">
-          <h1 className="text-2xl font-semibold text-foreground">
+          <h1 className="text-foreground">
             Reset your password
           </h1>
           <p className="mt-2 text-text-muted">

@@ -36,7 +36,7 @@ function ConfirmContent() {
       )}
       {status === "success" && (
         <>
-          <h1 className="text-2xl font-semibold text-foreground">
+          <h1 className="text-foreground">
             Your email is confirmed
           </h1>
           <p className="max-w-md text-text-muted">
@@ -60,7 +60,7 @@ function ConfirmContent() {
       )}
       {status === "error" && (
         <>
-          <h1 className="text-2xl font-semibold text-foreground">
+          <h1 className="text-foreground">
             We couldn&apos;t confirm your email
           </h1>
           <p className="max-w-md text-text-muted">

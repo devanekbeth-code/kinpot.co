@@ -122,7 +122,7 @@ export default function AccountPage() {
           <Link href="/" className="text-sm text-link">
             Back to app
           </Link>
-          <h1 className="mt-4 text-2xl font-semibold text-foreground">
+          <h1 className="mt-4 text-foreground">
             Your account
           </h1>
           <p className="mt-2 text-text-muted">
@@ -131,7 +131,7 @@ export default function AccountPage() {
         </div>
 
         <section className="flex flex-col gap-4 rounded-md border border-border bg-surface p-5">
-          <h2 className="text-lg font-semibold text-foreground">
+          <h2 className="text-foreground">
             Account details
           </h2>
           <dl className="flex flex-col gap-3 text-sm">
@@ -158,7 +158,7 @@ export default function AccountPage() {
           onSubmit={handlePasswordUpdate}
           className="flex flex-col gap-4 rounded-md border border-border bg-surface p-5"
         >
-          <h2 className="text-lg font-semibold text-foreground">
+          <h2 className="text-foreground">
             Change password
           </h2>
           <input
